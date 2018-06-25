@@ -1,0 +1,48 @@
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.exe.config
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.exe
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.pdb
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.dll
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.SqlServer.dll
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.xml
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.SqlServer.xml
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csprojAssemblyReference.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\MainWindow.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\RegistrationWindow.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\App.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_Content.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_MarkupCompile.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_MarkupCompile.lref
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\MainWindow.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\RegistrationWindow.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Resources\AllResources.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.g.resources
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.Properties.Resources.resources
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.GenerateResource.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.CoreCompileInputs.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.CopyComplete
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.exe
+F:\IT STEP\dotNET\WPF\writing programms\homework\Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.pdb
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.exe.config
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.exe
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\Exam_Gallery.pdb
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.dll
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.SqlServer.dll
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.xml
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\EntityFramework.SqlServer.xml
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\MainWindow.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\RegistrationWindow.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\App.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_Content.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_MarkupCompile.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery_MarkupCompile.lref
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\MainWindow.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\RegistrationWindow.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Resources\AllResources.baml
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.g.resources
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.Properties.Resources.resources
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.GenerateResource.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.CoreCompileInputs.cache
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.csproj.CopyComplete
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.exe
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.pdb
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\GeneratedInternalTypeHelper.g.cs

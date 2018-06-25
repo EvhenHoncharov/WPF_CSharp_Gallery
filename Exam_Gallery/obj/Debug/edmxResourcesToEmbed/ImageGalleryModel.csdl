@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ImageGalleryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GRADES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PICTURE_GRADES" Relationship="Self.F_KEY_GRADE" FromRole="GRADES" ToRole="PICTURE_GRADES" />
+  </EntityType>
+  <EntityType Name="PASSWORD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="USER" Relationship="Self.F_KEY_PASSWORD" FromRole="PASSWORD" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="PICTURE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullPath" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PICTURE_GRADES" Relationship="Self.F_KEY_PICTURE" FromRole="PICTURE" ToRole="PICTURE_GRADES" />
+  </EntityType>
+  <EntityType Name="PICTURE_GRADES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_User" Type="Int32" Nullable="false" />
+    <Property Name="Id_Picture" Type="Int32" Nullable="false" />
+    <Property Name="Id_Grade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GRADES" Relationship="Self.F_KEY_GRADE" FromRole="PICTURE_GRADES" ToRole="GRADES" />
+    <NavigationProperty Name="PICTURE" Relationship="Self.F_KEY_PICTURE" FromRole="PICTURE_GRADES" ToRole="PICTURE" />
+    <NavigationProperty Name="USER" Relationship="Self.F_KEY_USER" FromRole="PICTURE_GRADES" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id_Password" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PASSWORD" Relationship="Self.F_KEY_PASSWORD" FromRole="USER" ToRole="PASSWORD" />
+    <NavigationProperty Name="PICTURE_GRADES" Relationship="Self.F_KEY_USER" FromRole="USER" ToRole="PICTURE_GRADES" />
+  </EntityType>
+  <Association Name="F_KEY_GRADE">
+    <End Role="GRADES" Type="Self.GRADES" Multiplicity="1" />
+    <End Role="PICTURE_GRADES" Type="Self.PICTURE_GRADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRADES">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PICTURE_GRADES">
+        <PropertyRef Name="Id_Grade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_KEY_PASSWORD">
+    <End Role="PASSWORD" Type="Self.PASSWORD" Multiplicity="1" />
+    <End Role="USER" Type="Self.USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PASSWORD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="USER">
+        <PropertyRef Name="Id_Password" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_KEY_PICTURE">
+    <End Role="PICTURE" Type="Self.PICTURE" Multiplicity="1" />
+    <End Role="PICTURE_GRADES" Type="Self.PICTURE_GRADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PICTURE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PICTURE_GRADES">
+        <PropertyRef Name="Id_Picture" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_KEY_USER">
+    <End Role="USER" Type="Self.USER" Multiplicity="1" />
+    <End Role="PICTURE_GRADES" Type="Self.PICTURE_GRADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PICTURE_GRADES">
+        <PropertyRef Name="Id_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ImageGalleryEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GRADES" EntityType="Self.GRADES" />
+    <EntitySet Name="PASSWORD" EntityType="Self.PASSWORD" />
+    <EntitySet Name="PICTURE" EntityType="Self.PICTURE" />
+    <EntitySet Name="PICTURE_GRADES" EntityType="Self.PICTURE_GRADES" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="USER" EntityType="Self.USER" />
+    <AssociationSet Name="F_KEY_GRADE" Association="Self.F_KEY_GRADE">
+      <End Role="GRADES" EntitySet="GRADES" />
+      <End Role="PICTURE_GRADES" EntitySet="PICTURE_GRADES" />
+    </AssociationSet>
+    <AssociationSet Name="F_KEY_PASSWORD" Association="Self.F_KEY_PASSWORD">
+      <End Role="PASSWORD" EntitySet="PASSWORD" />
+      <End Role="USER" EntitySet="USER" />
+    </AssociationSet>
+    <AssociationSet Name="F_KEY_PICTURE" Association="Self.F_KEY_PICTURE">
+      <End Role="PICTURE" EntitySet="PICTURE" />
+      <End Role="PICTURE_GRADES" EntitySet="PICTURE_GRADES" />
+    </AssociationSet>
+    <AssociationSet Name="F_KEY_USER" Association="Self.F_KEY_USER">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="PICTURE_GRADES" EntitySet="PICTURE_GRADES" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ImageGalleryModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ImageGalleryModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

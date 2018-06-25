@@ -1,0 +1,82 @@
+﻿<Window x:Class="Exam_Gallery.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam_Gallery"
+        mc:Ignorable="d" Height="650" Width="450" MinWidth="350" MinHeight="450">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/AllResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Name="mainGrid">
+        <Border Margin="5" BorderThickness="3" BorderBrush="Blue" CornerRadius="15">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Image Gallery Registration</Label>
+                
+                <!-- login -->
+                <Label Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">Login</Label>
+                <TextBox Grid.Row="2" Name="textBoxLogin"></TextBox>
+                
+                <!-- password -->
+                <Label Grid.Row="3" HorizontalAlignment="left" VerticalAlignment="Bottom">Password</Label>
+                <PasswordBox Grid.Row="4" Name="passwordBox1"></PasswordBox>
+                
+                <!-- password confirmation -->
+                <Label Grid.Row="5" HorizontalAlignment="left" VerticalAlignment="Bottom">Password again</Label>
+                <PasswordBox Grid.Row="6" Name="passwordBox2"></PasswordBox>
+                
+                <!-- additional information -->
+                <Label Grid.Row="7" HorizontalAlignment="left" VerticalAlignment="Bottom">About yourself</Label>
+                
+                <!-- name -->
+                <Label Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">Name</Label>
+                <TextBox Grid.Row="9" Name="textBoxName"></TextBox>
+
+                <!-- surname -->
+                <Label Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Bottom">Surname</Label>
+                <TextBox Grid.Row="11" Name="textBoxSurname"></TextBox>
+
+                <Label Name="labelRegistrationMessage" Grid.Row="12"></Label>
+
+                <Grid Grid.Row="13" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Name="buttonOk">Ok</Button>
+                    <Button Grid.Column="1" Name="buttonCancel">Cancel</Button>
+                </Grid>
+               
+
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

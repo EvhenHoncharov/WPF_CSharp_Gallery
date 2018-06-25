@@ -46,3 +46,6 @@ F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gal
 F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.exe
 F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\Exam_Gallery.pdb
 F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\nunit.framework.dll
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\nunit.framework.pdb
+F:\IT STEP\dotNET\WPF\writing programms\homework\7 Gallery\Exam_Gallery\Exam_Gallery\bin\Debug\nunit.framework.xml

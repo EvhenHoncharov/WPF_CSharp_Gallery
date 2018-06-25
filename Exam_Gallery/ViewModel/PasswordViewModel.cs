@@ -66,7 +66,6 @@ namespace Exam_Gallery.ViewModel
             Clear();
             SetTextMessage();
         }
-
         private bool CanExecuteOk(object parameter) => !HasEmptyField();
         
         private ICommand onLoginCancel;
@@ -81,9 +80,6 @@ namespace Exam_Gallery.ViewModel
         }
         private void ExecuteCancel(object param) => Clear();
         private bool CanExecuteCancel(object param) => HasEmptyField() == true ? false : true;
-
-        
-        private void DebuggingAuthorization() => MessageBox.Show($"authorization value: {IsAuthorisationSuccessful}");
 
         //returns true, when both fields have length not less than one symbol
         private bool HasEmptyField() => (String.IsNullOrEmpty(Login) || String.IsNullOrEmpty(UserPassword)) == true ? true : false;

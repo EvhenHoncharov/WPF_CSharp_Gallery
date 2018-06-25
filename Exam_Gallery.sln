@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam_Gallery", "Exam_Gallery\Exam_Gallery.csproj", "{1BCAB519-0F9C-49A4-9A21-26CA292E182A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{85AE898B-2FEE-4B3C-B5A9-7822D738E019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_DbModel", "UnitTest_DbModel\UnitTest_DbModel.csproj", "{CBE14075-837E-45C0-BF23-96185372901C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{1BCAB519-0F9C-49A4-9A21-26CA292E182A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BCAB519-0F9C-49A4-9A21-26CA292E182A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BCAB519-0F9C-49A4-9A21-26CA292E182A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE14075-837E-45C0-BF23-96185372901C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE14075-837E-45C0-BF23-96185372901C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE14075-837E-45C0-BF23-96185372901C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE14075-837E-45C0-BF23-96185372901C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBE14075-837E-45C0-BF23-96185372901C} = {85AE898B-2FEE-4B3C-B5A9-7822D738E019}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2532512A-5116-4816-A25E-46D67364FC26}

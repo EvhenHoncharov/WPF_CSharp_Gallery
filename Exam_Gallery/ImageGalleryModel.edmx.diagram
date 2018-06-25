@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="175c524b5a27470aaf8c82524eb74c79" Name="Diagram1">
+      <Diagram DiagramId="c9ce6452dfd04e33a2cc90cb3f8f3de1" Name="Diagram1">
         <EntityTypeShape EntityType="ImageGalleryModel.GRADES" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ImageGalleryModel.PASSWORD" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ImageGalleryModel.PICTURE" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />

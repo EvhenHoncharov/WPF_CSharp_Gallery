@@ -15,10 +15,10 @@ namespace Exam_Gallery
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class ImageGalleryEntities1 : DbContext
+    public partial class ImageGalleryEntities2 : DbContext
     {
-        public ImageGalleryEntities1()
-            : base("name=ImageGalleryEntities1")
+        public ImageGalleryEntities2()
+            : base("name=ImageGalleryEntities2")
         {
         }
     
@@ -33,6 +33,36 @@ namespace Exam_Gallery
         public virtual DbSet<PICTURE_GRADES> PICTURE_GRADES { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<USER> USER { get; set; }
+    
+        public virtual int insert_new_password(string login, string password)
+        {
+            var loginParameter = login != null ?
+                new ObjectParameter("Login", login) :
+                new ObjectParameter("Login", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_new_password", loginParameter, passwordParameter);
+        }
+    
+        public virtual int insert_new_user(string name, string surname, Nullable<int> id_Password)
+        {
+            var nameParameter = name != null ?
+                new ObjectParameter("Name", name) :
+                new ObjectParameter("Name", typeof(string));
+    
+            var surnameParameter = surname != null ?
+                new ObjectParameter("Surname", surname) :
+                new ObjectParameter("Surname", typeof(string));
+    
+            var id_PasswordParameter = id_Password.HasValue ?
+                new ObjectParameter("Id_Password", id_Password) :
+                new ObjectParameter("Id_Password", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_new_user", nameParameter, surnameParameter, id_PasswordParameter);
+        }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -104,6 +104,15 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="insert_new_password" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Login" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="insert_new_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Surname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Id_Password" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -269,7 +278,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ImageGalleryEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ImageGalleryEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GRADES" EntityType="Self.GRADES" />
           <EntitySet Name="PASSWORD" EntityType="Self.PASSWORD" />
           <EntitySet Name="PICTURE" EntityType="Self.PICTURE" />
@@ -292,6 +301,15 @@
             <End Role="USER" EntitySet="USER" />
             <End Role="PICTURE_GRADES" EntitySet="PICTURE_GRADES" />
           </AssociationSet>
+          <FunctionImport Name="insert_new_password">
+            <Parameter Name="Login" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="insert_new_user">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Surname" Mode="In" Type="String" />
+            <Parameter Name="Id_Password" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -339,7 +357,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ImageGalleryModelStoreContainer" CdmEntityContainer="ImageGalleryEntities1">
+        <EntityContainerMapping StorageEntityContainer="ImageGalleryModelStoreContainer" CdmEntityContainer="ImageGalleryEntities2">
           <EntitySetMapping Name="GRADES">
             <EntityTypeMapping TypeName="ImageGalleryModel.GRADES">
               <MappingFragment StoreEntitySet="GRADES">
@@ -396,6 +414,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="insert_new_password" FunctionName="ImageGalleryModel.Store.insert_new_password" />
+          <FunctionImportMapping FunctionImportName="insert_new_user" FunctionName="ImageGalleryModel.Store.insert_new_user" />
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ImageGalleryModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ImageGalleryModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ImageGalleryModel.Store.sp_dropdiagram" />
